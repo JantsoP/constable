@@ -1,4 +1,3 @@
-
 module.exports = {
     name: "hello", // this is the name of the command, it will be used to call the command
     aliases:["hi", "yo", "hey"], // this is optional, they are just other ways to call the command. command will still work even if you don't have aliases
@@ -8,5 +7,3 @@ module.exports = {
         
     }
 }
-
-

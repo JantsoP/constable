@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
     name: "guildDelete",
     async execute(client, guild) {
-        const channel = client.channels.cache.get('1138074403914141727')
+        const channel = client.channels.cache.get('1210909890395246602')
         
         if (!guild.available) {
             const embed = new MessageEmbed()

@@ -40,9 +40,9 @@ module.exports = {
             await interaction.editReply({
                 content: `
 **__Constable Stats__**
-<:constable_information:1091355714972299264> Total Verifications: ${allVerifications.length}
-<:constable_success:1091386376286654619> Total Passed: ${totalPass}
-<:constable_error:1091386274239238324> Total Failed: ${totalFail}
+<:lequack:886700052498763856> Total Verifications: ${allVerifications.length}
+<a:anime:874558465664753714> Total Passed: ${totalPass}
+<:cmonlol:732889775375253565> Total Failed: ${totalFail}
 
 __Top 3 Guilds__
 ${top.map((g, i) => `${i + 1}. ${g.guildName} (${g.guild}) - ${g.total}`).join("\n")}

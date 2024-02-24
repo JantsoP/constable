@@ -5,13 +5,13 @@ const fs = require("fs");
 const emoji = (num) => {
     switch (num) {
         case 0:
-            return "<:one_icon:1091382104996192369>";
+            return "<:1_one:715610185242247199>";
         case 1:
-            return "<:two_icon:1091382109140176996>";
+            return "<:2_zwo:715610173946855536>";
         case 2:
-            return "<:three_icon:1091382106573250723>";
+            return "<:3_three:715610155047190538>";
         case 3:
-            return "<:four_icon:1091382102412496928>";
+            return "<:4_four:715610142732714083>";
         default:
             return null;
     }
@@ -107,14 +107,14 @@ module.exports = {
 
         if (!config) {
             let embed = new MessageEmbed()
-                .setDescription("<:constable_error:1091386274239238324> Verification is not set up for this server!")
+                .setDescription("<:hnnnggg:921346848843788298> Verification is not set up for this server!")
                 .setColor("#d73f3f")
             return interaction.reply({ embeds: [embed], ephemeral: true })
         }
 
         if (config?.verification?.enabled === false) {
             let embed = new MessageEmbed()
-                .setDescription(`<:constable_error:1091386274239238324> **${interaction.guild.name}** has disabled verification!`)
+                .setDescription(`<:hnnnggg:921346848843788298> **${interaction.guild.name}** has disabled verification!`)
                 .setColor("#d73f3f")
             return interaction.reply({ embeds: [embed], ephemeral: true })
         }
@@ -126,20 +126,20 @@ module.exports = {
             const role = interaction.guild.roles.cache.get(config?.verification?.role);
             if (!role) {
                 let embed = new MessageEmbed()
-                    .setDescription(`<:constable_error:1091386274239238324>  **${interaction.guild.name}** does not have a verification role set up!`)
+                    .setDescription(`<:hnnnggg:921346848843788298>  **${interaction.guild.name}** does not have a verification role set up!`)
                     .setColor("#d73f3f")
                 return interaction.reply({ embeds: [embed], ephemeral: true })
             }
 
             if (interaction.member.roles.cache.has(config?.verification?.role)) {
                 let embed = new MessageEmbed()
-                    .setDescription("<:constable_warning:1091384235518074962> You are already verified!")
+                    .setDescription("<:shib:863143229360832522> You are already verified!")
                     .setColor("#e18f00")
                 return interaction.reply({ embeds: [embed], ephemeral: true })
             }
 
             const loadingEmbed = new MessageEmbed()
-                .setDescription("<a:generating_captcha:1091382516147028039> Generating your image captcha...")
+                .setDescription("<a:loading:1210913721023733820> Generating your image captcha...")
                 .setColor("ORANGE")
             await interaction.reply({ embeds: [loadingEmbed], ephemeral: true });
 

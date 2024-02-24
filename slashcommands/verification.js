@@ -58,7 +58,7 @@ module.exports = {
             else {
                 await client.db.collection("config").updateOne({ guild: interaction.guild.id }, { $set: { "verification.enabled": !config.verification.enabled } });
             }
-            return interaction.editReply({ content: `<:constable_success:1091386376286654619> Verification has been ${config.verification.enabled ? "disabled" : "enabled"}!` });
+            return interaction.editReply({ content: `<:stonks:1081523053097394307> Verification has been ${config.verification.enabled ? "disabled" : "enabled"}!` });
         }
 
         else if (subcommand === 'role') {
@@ -70,7 +70,7 @@ module.exports = {
             else {
                 await client.db.collection("config").updateOne({ guild: interaction.guild.id }, { $set: { "verification.role": role.id } });
             }
-            return interaction.editReply({ content: `<:constable_success:1091386376286654619> Verification role has been set to <@&${role.id}>!`, allowedMentions: { parse: [] } });
+            return interaction.editReply({ content: `<:stonks:1081523053097394307> Verification role has been set to <@&${role.id}>!`, allowedMentions: { parse: [] } });
         }
 
         else if (subcommand === 'logs') {
@@ -82,7 +82,7 @@ module.exports = {
             else {
                 await client.db.collection("config").updateOne({ guild: interaction.guild.id }, { $set: { "verification.logs": channel.id } });
             }
-            return interaction.editReply({ content: `<:constable_success:1091386376286654619> Verification logs have been set to <#${channel.id}>!`, allowedMentions: { parse: [] } });
+            return interaction.editReply({ content: `<:stonks:1081523053097394307> Verification logs have been set to <#${channel.id}>!`, allowedMentions: { parse: [] } });
         }
 
         else if (subcommand === 'message') {
@@ -98,7 +98,7 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setTitle("Verification")
-                .setDescription(`**${interaction.guild.name}** uses **${client.user.username}** to manually verify users and prevent raids.\n\n<:constable_information:1091355714972299264> Please click the button below to verify yourself.`)
+                .setDescription(`**${interaction.guild.name}** uses **${client.user.username}** to manually verify users and prevent raids.\n\n<:pokemon:877121049706262549> Please click the button below to verify yourself.`)
                 .setColor("ORANGE")
                 .setImage(`https://cdn.blacklister.xyz/guild_verify.png`)
 
@@ -115,12 +115,12 @@ module.exports = {
 
             if (failed) {
                 const embed = new MessageEmbed()
-                    .setDescription("<:constable_error:1091386274239238324> I do not have permission to send messages in that channel!")
+                    .setDescription("<:hnnnggg:921346848843788298> I do not have permission to send messages in that channel!")
                     .setColor("#d73f3f")
                 return interaction.editReply({ embeds: [embed] });
             }
 
-            return interaction.editReply({ content: `<:constable_success:1091386376286654619> Verification message has been sent to <#${channel.id}>!`, allowedMentions: { parse: [] } });
+            return interaction.editReply({ content: `<:stonks:1081523053097394307> Verification message has been sent to <#${channel.id}>!`, allowedMentions: { parse: [] } });
         }
 
     }

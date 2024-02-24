@@ -4,7 +4,7 @@ const axios = require("axios")
 module.exports = {
     name: "guildCreate",
     async execute(client, guild) {
-        const channel = client.channels.cache.get('1138074403914141727')
+        const channel = client.channels.cache.get('1210909890395246602')
 
         if (!guild.available) {
             const embed = new MessageEmbed()
