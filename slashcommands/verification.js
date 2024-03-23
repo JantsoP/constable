@@ -98,7 +98,7 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setTitle("Verification")
-                .setDescription(`**${interaction.guild.name}** uses **${client.user.username}** to manually verify users and prevent raids.\n\n<:pokemon:877121049706262549> Please click the button below to verify yourself.`)
+                .setDescription(`**${interaction.guild.name}** käyttää **${client.user.username}** vahvistaakseen käyttäjiä sekä estääkseen mahdolliset raidit.\n\nPaina alla olevaa nappulaa vahvistaaksesi itsesi.`)
                 .setColor("ORANGE")
                 .setImage(`https://cdn.blacklister.xyz/guild_verify.png`)
 
@@ -106,7 +106,7 @@ module.exports = {
                 .addComponents(
                     new MessageButton()
                         .setCustomId('verification-start')
-                        .setLabel('Verify')
+                        .setLabel('Vahvista itsesi')
                         .setStyle('SECONDARY')
                 );
 
